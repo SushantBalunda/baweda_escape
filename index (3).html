@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baweda Escape: Endless Run</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrapper">
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen active">
+      <div class="screen-inner">
+        <div class="logo-badge">🏃</div>
+        <h1 class="game-title">BAWEDA<br><span>ESCAPE</span></h1>
+        <p class="subtitle">Don't let the officer catch you!</p>
+        <div class="controls-hint">
+          <span>← → Move</span>
+          <span>↑ Jump</span>
+          <span>↓ Slide</span>
+        </div>
+        <button id="start-btn" class="btn btn-primary">▶ START RUNNING</button>
+        <div id="high-score-display" class="high-score">🏆 Best: <span id="hs-value">0</span></div>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="screen">
+      <div class="screen-inner">
+        <div class="caught-badge">😵</div>
+        <h2 class="gameover-title">CAUGHT!</h2>
+        <p class="gameover-sub">The officer got you!</p>
+        <div class="score-box">
+          <div class="score-line">Score <span id="final-score">0</span></div>
+          <div class="score-line best">Best <span id="final-hs">0</span></div>
+        </div>
+        <button id="restart-btn" class="btn btn-primary">↺ TRY AGAIN</button>
+      </div>
+    </div>
+
+    <!-- Pause Screen -->
+    <div id="pause-screen" class="screen">
+      <div class="screen-inner">
+        <h2 class="pause-title">⏸ PAUSED</h2>
+        <button id="resume-btn" class="btn btn-secondary">▶ RESUME</button>
+      </div>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud">
+      <div id="hud-score">🏃 <span id="score-val">0</span></div>
+      <button id="pause-btn">⏸</button>
+      <div id="hud-chaser">🚔 <span id="chaser-val">100m</span></div>
+    </div>
+
+    <!-- Powerup indicator -->
+    <div id="powerup-indicator"></div>
+
+    <!-- Canvas -->
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls">
+      <button class="mobile-btn" id="btn-left">◀</button>
+      <div class="mobile-center">
+        <button class="mobile-btn" id="btn-up">▲</button>
+        <button class="mobile-btn" id="btn-down">▼</button>
+      </div>
+      <button class="mobile-btn" id="btn-right">▶</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
